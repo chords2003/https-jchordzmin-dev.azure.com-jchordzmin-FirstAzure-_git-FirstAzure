@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
 use App\Models\Chirp;
+use Inertia\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ChirpController extends Controller
 {
@@ -12,9 +15,11 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        //
-    }
 
+        return Inertia::render('Chirps/Index', [
+            //
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      */
