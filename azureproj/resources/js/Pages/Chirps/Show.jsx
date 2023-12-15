@@ -75,8 +75,17 @@ export default function Chirp({ chirp })
                             : <p className="mt-4 text-lg text-gray-900">
                                     <a href={`/chirps/${chirp.id}`}>{chirp.message}</a>
                                 </p>
+
                             }
+                            {/* create a route to go back to the index page */}
+                            <div className="mt-4">
+                                <a href="/chirps">Go Back</a>
+                            </div>
+
                     </div>
                 </div>
+
     );
+
 }
+

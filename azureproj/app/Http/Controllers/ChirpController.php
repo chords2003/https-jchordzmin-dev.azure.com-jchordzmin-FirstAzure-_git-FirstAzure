@@ -49,7 +49,10 @@ class ChirpController extends Controller
      */
     public function show(Chirp $chirp)
     {
-        //
+        //return the view for the show page
+        return Inertia::render('Chirps/Show', [
+            'chirp' => $chirp->load('user:id,name')
+        ]);
     }
 
     /**
