@@ -2,7 +2,8 @@ import React from 'react';
 import dayjs from 'dayjs';
 //import the dropdown button component
 import Dropdown from '@/Components/Dropdown';
-//import the usestate hook
+//import the dropdown link component
+
 import { useState } from 'react';
 //import inputError component
 import InputError from '@/Components/InputError';
@@ -54,6 +55,10 @@ export default function Chirp({ chirp })
                                 <button className="block w-full px-4 py-2 text-left text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 transition duration-150 ease-in-out" onClick={() => setEditing(true)}>
                                     Edit
                                 </button>
+                                {/* add the dropdown link button */}
+                                <Dropdown.Link as="button" href={route('chirps.destroy', chirp.id)} method="delete">
+                                    Delete
+                                </Dropdown.Link>
                             </Dropdown.Content>
                         </Dropdown>
                     }
